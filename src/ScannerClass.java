@@ -50,7 +50,14 @@ public class ScannerClass {
 		s = new Scanner("this is another string");
 		s.useDelimiter("is"); 
 		System.out.println(s.next());
-	
+		System.out.println("-------------------------");
+		
+		s = new Scanner("Doing some Java. rest of string");
+		System.out.println(s.findWithinHorizon("Java", 10));
+		//System.out.println(s.nextLine());
+		System.out.println(s.findWithinHorizon("Java", 20)); // removes the entire horizon from the string
+		System.out.println(s.nextLine());
+		
 	}
 
 }
