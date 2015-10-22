@@ -3,7 +3,7 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.util.Scanner;
 
-
+// comment
 public class ScannerClass {
 
 	public static void main(String[] args) {
@@ -56,8 +56,7 @@ public class ScannerClass {
 		System.out.println(s.findWithinHorizon("Java", 10));
 		//System.out.println(s.nextLine());
 		System.out.println(s.findWithinHorizon("Java", 20)); // removes the entire horizon from the string
-		System.out.println(s.nextLine());
-		
+		System.out.println(s.nextLine());		
 	}
 
 }
