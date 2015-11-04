@@ -47,17 +47,17 @@ public class ScannerClass {
 		System.out.println("delimiter() " + s.delimiter()); // returns the current pattern used as the delimiter
 		System.out.println("toString() " + s.toString()); // WOW isn't that cool?
 		System.out.println("-------------------------");
-		
+
 		s = new Scanner("this is another string");
-		s.useDelimiter("is"); 
+		s.useDelimiter("is");
 		System.out.println(s.next());
 		System.out.println("-------------------------");
-		
+
 		s = new Scanner("Doing some Java. rest of string");
 		System.out.println(s.findWithinHorizon("Java", 10));
 		//System.out.println(s.nextLine());
 		System.out.println(s.findWithinHorizon("Java", 20)); // removes the entire horizon from the string
-		System.out.println(s.nextLine());		
+		System.out.println(s.nextLine());
 	}
 
 }
