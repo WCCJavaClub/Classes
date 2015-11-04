@@ -6,7 +6,7 @@ import java.util.Scanner;
 // comment
 public class ScannerClass {
 
-	public static void main(String[] args) {
+	public static void main(final String[] args) {
 		Scanner s = null;
 		File ScannerFile = null;
 		FileInputStream fis = null;
