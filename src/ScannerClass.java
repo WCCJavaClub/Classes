@@ -20,6 +20,7 @@ public class ScannerClass {
 			s = new Scanner(ScannerFile);
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
+			return;
 		}
 
 		while(s.hasNext()){
