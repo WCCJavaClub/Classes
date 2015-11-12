@@ -6,11 +6,15 @@ import static org.junit.Assert.assertNull;
 import static org.junit.Assert.assertTrue;
 
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.LinkedList;
 import java.util.Map;
 import java.util.Queue;
+import java.util.Set;
 
 import org.junit.Test;
+
+import collections.MyHashSet;
 
 /**
  * A class to test my collections implementations.
@@ -85,5 +89,41 @@ public class TestCollections {
 		assertEquals("The Map has the first value once it is inserted", "value", map.get("key"));
 		map.put("key", "another");
 		assertEquals("The Map has the second value instead of the first after another put()", "another", map.get("key"));
+	}
+	/**
+	 * Test that a Set is initially empty.
+	 */
+	@Test
+	public void testSetInitialState() {
+//		final Set<String> set = new MyHashSet<>();
+		final Set<String> set = new HashSet<>();
+		assertEquals("A Set starts out empty", 0, set.size());
+		assertTrue("A Set starts out empty", set.isEmpty());
+	}
+	/**
+	 * Test the uniqueness property of Sets.
+	 */
+	@Test
+	public void testSetUniqueness() {
+//		final Set<String> set = new MyHashSet<>();
+		final Set<String> set = new HashSet<>();
+		assertEquals("A Set starts out empty", 0, set.size());
+		set.add("string");
+		assertEquals("Size of 1 after adding the item", 1, set.size());
+		set.add("string");
+		assertEquals("Adding something twice to a Set doesn't change it twice", 1, set.size());
+		set.add("second");
+		assertEquals("A set can contain more than one item", 2, set.size());
+	}
+	/**
+	 * Test that we can get items out of a set.
+	 */
+	@Test
+	public void testSet() {
+//		final Set<String> set = new MyHashSet<>();
+		final Set<String> set = new HashSet<>();
+		assertFalse("Set initially doesn't contain our data", set.contains("value"));
+		set.add("value");
+		assertTrue("Set contains value after adding it", set.contains("value"));
 	}
 }
