@@ -5,12 +5,12 @@ import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertNull;
 import static org.junit.Assert.assertTrue;
 
+import java.util.HashMap;
 import java.util.LinkedList;
+import java.util.Map;
 import java.util.Queue;
 
 import org.junit.Test;
-
-import collections.MyLinkedQueue;
 
 /**
  * A class to test my collections implementations.
@@ -40,5 +40,15 @@ public class TestCollections {
 		assertEquals("The item we added was at the head of the queue", "string", queue.remove());
 		assertNull("After remove(), the queue is empty again", queue.peek());
 		assertTrue("After remove(), the queue is empty again", queue.isEmpty());
+	}
+	/**
+	 * Test my Map implementation.
+	 */
+	@Test
+	public void testMap() {
+//		final Map<String, String> map = new MyHashMap<>();
+		final Map<String, String> map = new HashMap<>();
+		assertEquals("A Map starts out empty", 0, map.size());
+		assertTrue("A Map starts out empty", map.isEmpty());
 	}
 }
