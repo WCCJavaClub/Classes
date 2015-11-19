@@ -6,7 +6,7 @@ import java.util.Scanner;
 // comment
 public class ScannerClass {
 
-	public static void main(String[] args) {
+	public static void main(final String[] args) {
 		Scanner s = null;
 		File ScannerFile = null;
 		FileInputStream fis = null;
@@ -20,6 +20,7 @@ public class ScannerClass {
 			s = new Scanner(ScannerFile);
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
+			return;
 		}
 
 		while(s.hasNext()){
@@ -46,17 +47,17 @@ public class ScannerClass {
 		System.out.println("delimiter() " + s.delimiter()); // returns the current pattern used as the delimiter
 		System.out.println("toString() " + s.toString()); // WOW isn't that cool?
 		System.out.println("-------------------------");
-		
+
 		s = new Scanner("this is another string");
-		s.useDelimiter("is"); 
+		s.useDelimiter("is");
 		System.out.println(s.next());
 		System.out.println("-------------------------");
-		
+
 		s = new Scanner("Doing some Java. rest of string");
 		System.out.println(s.findWithinHorizon("Java", 10));
 		//System.out.println(s.nextLine());
 		System.out.println(s.findWithinHorizon("Java", 20)); // removes the entire horizon from the string
-		System.out.println(s.nextLine());		
+		System.out.println(s.nextLine());
 	}
 
 }
